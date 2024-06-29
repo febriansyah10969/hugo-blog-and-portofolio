@@ -1,0 +1,12 @@
+{{ define "main" }}
+<H1>INI LIST</H1>
+<div class="post-list">
+    {{ range .Pages }}
+        <div class="post-item">
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p>{{ .Summary }}</p>
+            <a href="{{ .Permalink }}">Read More</a>
+        </div>
+    {{ end }}
+</div>
+{{ end }}

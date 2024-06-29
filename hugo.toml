@@ -1,0 +1,16 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+[[menu.main]]
+  name = "About"
+  url = "/about"
+  weight = 1
+[build]
+writeStats = true
+[build.postCSS]
+[build.postCSS.options]
+  use = ["postcss"]
+[build.postCSS.plugins]
+  postcss-import = {}
+  tailwindcss = {}
+  autoprefixer = {}
