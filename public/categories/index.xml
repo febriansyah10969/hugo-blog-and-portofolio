@@ -6,6 +6,42 @@
     <description>Recent content in Categories on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 26 Jun 2024 13:19:14 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jquery</title>
+      <link>http://localhost:1313/categories/jquery/</link>
+      <pubDate>Wed, 26 Jun 2024 13:19:14 +0700</pubDate>
+      <guid>http://localhost:1313/categories/jquery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Laravel</title>
+      <link>http://localhost:1313/categories/laravel/</link>
+      <pubDate>Wed, 26 Jun 2024 13:19:14 +0700</pubDate>
+      <guid>http://localhost:1313/categories/laravel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mysql</title>
+      <link>http://localhost:1313/categories/mysql/</link>
+      <pubDate>Wed, 26 Jun 2024 13:19:14 +0700</pubDate>
+      <guid>http://localhost:1313/categories/mysql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NestJs</title>
+      <link>http://localhost:1313/categories/nestjs/</link>
+      <pubDate>Wed, 26 Jun 2024 13:19:14 +0700</pubDate>
+      <guid>http://localhost:1313/categories/nestjs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nginx</title>
+      <link>http://localhost:1313/categories/nginx/</link>
+      <pubDate>Wed, 26 Jun 2024 13:19:14 +0700</pubDate>
+      <guid>http://localhost:1313/categories/nginx/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

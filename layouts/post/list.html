@@ -1,4 +1,9 @@
 {{ define "main" }} 
+<div class="col-span-12 mb-6">
+  <p class="text-3xl text-red-900 font-extrabold">My Personal Notes</p>
+  <!-- <p class="text-sm font-semibold">I don't share this articles for you guys. I just post these articles to remind me that I have learned it before.   -->
+</div>
+
 {{ $pages := where .Site.RegularPages "Section" "post" }} 
   {{ $pages = $pages.ByTitle }} 
   {{ $paginator := .Paginate $pages 7 }}
@@ -11,13 +16,11 @@
   <!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
   {{ $upper_limit := (sub $paginator.TotalPages $adjacent_links) }}
   {{ range $paginator.Pages }}
-  <!-- Code to display each post -->
   <a href="{{ .Permalink }}">
-    <div
-      class="col-span-12 mb-3 sm:col-span-12 md:col-span-12 lg:col-span-12 xl:col-span-12"
-    >
+    <div class="col-span-12 mb-3 sm:col-span-12 md:col-span-12 lg:col-span-12 xl:col-span-12">
       <div class="rounded-md bg-gray-50 p-4 shadow">
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-4">
+          <!-- SVG Icon -->
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -34,17 +37,34 @@
               />
             </svg>
           </span>
-          <div>
-            <span class="text-sm font-bold">{{ .Title }}</span>
-            <p class="text-xs font-semibold">
-              {{ .Date.Format "January 2, 2006 3:04 PM" }}
-            </p>
+  
+          <!-- Title and Date -->
+          <div class="flex-1 flex items-center justify-between">
+            <div>
+              <span class="text-sm font-bold">{{ .Title }}</span>
+              <!-- Date -->
+              <p class="text-xs font-semibold">
+                {{ .Date.Format "January 2, 2006 3:04 PM" }}
+              </p>
+            </div>
           </div>
+  
+          <!-- Categories -->
+          {{ if .Params.categories }}
+          <div class="flex space-x-2">
+            {{ $categories := .Params.categories }}
+            {{ range $index, $category := $categories }}
+              <span class="text-xs font-semibold bg-slate-200 p-1 pl-2 pr-2 rounded-lg">{{ $category }}</span>
+            {{ end }}
+          </div>
+          {{ end }}
         </div>
       </div>
     </div>
   </a>
   {{ end }}
+  
+  
 
   {{ if gt $paginator.TotalPages 1 }}
   <nav aria-label="Page navigation" class="w-full mt-10">
@@ -58,13 +78,13 @@
         </li>
       {{ end }}
       <!-- Previous page -->
-      {{ if $paginator.HasPrev }}
+      {{/*  {{ if $paginator.HasPrev }}
         <li class="page-item">
           <a class="px-4 py-2 border rounded-md bg-white text-gray-800 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300" href="{{ $paginator.Prev.URL }}" rel="next">
             Previous
           </a>
         </li>
-      {{ end }}
+      {{ end }}  */}}
       <!-- Page numbers -->
       {{ range $paginator.Pagers }}
         {{ $.Scratch.Set "page_number_flag" false }}
@@ -94,13 +114,13 @@
         {{ end }}
       {{ end }}
       <!-- Next page -->
-      {{ if $paginator.HasNext }}
+      {{/*  {{ if $paginator.HasNext }}
         <li class="page-item">
           <a class="px-4 py-2 border rounded-md bg-white text-gray-800 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300" href="{{ $paginator.Next.URL }}">
             Next
           </a>
         </li>
-      {{ end }}
+      {{ end }}  */}}
       <!-- Last page -->
       {{ if ne $paginator.PageNumber $paginator.TotalPages }}
         <li class="page-item">

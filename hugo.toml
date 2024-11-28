@@ -16,3 +16,7 @@ writeStats = true
   autoprefixer = {}
 [params]
   paginate = 2
+[taxonomies]
+  category = "categories"
+[permalinks]
+  categories = "/categories/:slug/"
