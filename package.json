@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "tailwindcss build src/css/styles.css -o static/css/styles.css",
-    "watch:css": "tailwindcss build src/css/styles.css -o static/css/styles.css --watch"
+    "build:css": "tailwindcss -i src/css/styles.css -o static/css/styles.css",
+    "watch:css": "tailwindcss -i src/css/styles.css -o static/css/styles.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +14,9 @@
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.4"
+    "prettier": "^3.4.1",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^3.4.15"
   },
   "dependencies": {
     "postcss-cli": "^11.0.0"

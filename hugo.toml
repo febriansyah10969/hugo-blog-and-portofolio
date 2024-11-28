@@ -14,3 +14,5 @@ writeStats = true
   postcss-import = {}
   tailwindcss = {}
   autoprefixer = {}
+[params]
+  paginate = 2

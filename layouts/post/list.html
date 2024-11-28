@@ -1,12 +1,119 @@
-{{ define "main" }}
-<H1>INI LIST</H1>
-<div class="post-list">
-    {{ range .Pages }}
-        <div class="post-item">
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-            <p>{{ .Summary }}</p>
-            <a href="{{ .Permalink }}">Read More</a>
+{{ define "main" }} 
+{{ $pages := where .Site.RegularPages "Section" "post" }} 
+  {{ $pages = $pages.ByTitle }} 
+  {{ $paginator := .Paginate $pages 7 }}
+  <!-- Number of links either side of the current page. -->
+  {{ $adjacent_links := 2 }}
+  <!-- $max_links = ($adjacent_links * 2) + 1 -->
+  {{ $max_links := (add (mul $adjacent_links 2) 1) }}
+  <!-- $lower_limit = $adjacent_links + 1 -->
+  {{ $lower_limit := (add $adjacent_links 1) }}
+  <!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
+  {{ $upper_limit := (sub $paginator.TotalPages $adjacent_links) }}
+  {{ range $paginator.Pages }}
+  <!-- Code to display each post -->
+  <a href="{{ .Permalink }}">
+    <div
+      class="col-span-12 mb-3 sm:col-span-12 md:col-span-12 lg:col-span-12 xl:col-span-12"
+    >
+      <div class="rounded-md bg-gray-50 p-4 shadow">
+        <div class="flex items-center space-x-2">
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+              />
+            </svg>
+          </span>
+          <div>
+            <span class="text-sm font-bold">{{ .Title }}</span>
+            <p class="text-xs font-semibold">
+              {{ .Date.Format "January 2, 2006 3:04 PM" }}
+            </p>
+          </div>
         </div>
-    {{ end }}
-</div>
+      </div>
+    </div>
+  </a>
+  {{ end }}
+
+  {{ if gt $paginator.TotalPages 1 }}
+  <nav aria-label="Page navigation" class="w-full mt-10">
+    <ul class="flex justify-center space-x-2">
+      <!-- First page -->
+      {{ if ne $paginator.PageNumber 1 }}
+        <li class="page-item">
+          <a class="px-4 py-2 border rounded-md bg-white text-gray-800 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300" href="{{ $paginator.First.URL }}">
+            First
+          </a>
+        </li>
+      {{ end }}
+      <!-- Previous page -->
+      {{ if $paginator.HasPrev }}
+        <li class="page-item">
+          <a class="px-4 py-2 border rounded-md bg-white text-gray-800 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300" href="{{ $paginator.Prev.URL }}" rel="next">
+            Previous
+          </a>
+        </li>
+      {{ end }}
+      <!-- Page numbers -->
+      {{ range $paginator.Pagers }}
+        {{ $.Scratch.Set "page_number_flag" false }}
+        {{ if gt $paginator.TotalPages $max_links }}
+          {{ if le $paginator.PageNumber $lower_limit }}
+            {{ if le .PageNumber $max_links }}
+              {{ $.Scratch.Set "page_number_flag" true }}
+            {{ end }}
+          {{ else if ge $paginator.PageNumber $upper_limit }}
+            {{ if gt .PageNumber (sub $paginator.TotalPages $max_links) }}
+              {{ $.Scratch.Set "page_number_flag" true }}
+            {{ end }}
+          {{ else }}
+            {{ if and (ge .PageNumber (sub $paginator.PageNumber $adjacent_links)) (le .PageNumber (add $paginator.PageNumber $adjacent_links)) }}
+              {{ $.Scratch.Set "page_number_flag" true }}
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          {{ $.Scratch.Set "page_number_flag" true }}
+        {{ end }}
+        {{ if eq ($.Scratch.Get "page_number_flag") true }}
+          <li class="page-item{{ if eq . $paginator }} active {{ end }}">
+            <a class="px-4 py-2 border rounded-md {{ if eq . $paginator }}font-semibold bg-red-900 text-white{{ else }} bg-white text-gray-800 hover:bg-gray-300{{ end }} focus:outline-none focus:ring-2 focus:ring-gray-300" href="{{ .URL }}">
+              {{ .PageNumber }}
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
+      <!-- Next page -->
+      {{ if $paginator.HasNext }}
+        <li class="page-item">
+          <a class="px-4 py-2 border rounded-md bg-white text-gray-800 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300" href="{{ $paginator.Next.URL }}">
+            Next
+          </a>
+        </li>
+      {{ end }}
+      <!-- Last page -->
+      {{ if ne $paginator.PageNumber $paginator.TotalPages }}
+        <li class="page-item">
+          <a class="px-4 py-2 border rounded-md bg-white text-gray-800 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300" href="{{ $paginator.Last.URL }}">
+            Last
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+  {{ end }}
+  
+  
+
+
 {{ end }}
