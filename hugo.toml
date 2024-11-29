@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://febriansyah10969.netlify.app/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 [[menu.main]]
@@ -20,4 +20,4 @@ writeStats = true
   category = "categories"
 [permalinks]
   categories = "/categories/:slug/"
-  
+  post = "/post/:title/"
