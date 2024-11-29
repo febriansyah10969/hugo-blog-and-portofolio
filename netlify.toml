@@ -1,10 +1,6 @@
-[build.environment]
-  NETLIFY_USE_YARN = "true"
-  YARN_VERSION = "1.22.17"
-
 [build]
   command = "npm run start:production"
-  publish = "dist"
+  publish = "public"
 
 [context.deploy-preview]
   command = "npm run start:production"
