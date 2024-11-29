@@ -588,6 +588,274 @@ video {
   }
 }
 
+/* Styling for the custom container */
+
+.custom-content > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.custom-content {
+  /* Adds vertical space between direct child elements */
+}
+
+/* Headings */
+
+.custom-content h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  /* Large, bold heading with margin */
+}
+
+.custom-content h2 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  /* Slightly smaller bold heading */
+}
+
+.custom-content h3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  /* Smaller bold heading */
+}
+
+/* Paragraphs */
+
+.custom-content p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  line-height: 1.625;
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+  /* Base text size with relaxed line spacing */
+}
+
+/* Unordered list */
+
+.custom-content ul {
+  list-style-type: disc;
+}
+
+.custom-content ul > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.custom-content ul {
+  padding-left: 1.25rem;
+  /* Disc list style with padding and spacing between items */
+}
+
+/* Ordered list */
+
+.custom-content ol {
+  list-style-type: decimal;
+}
+
+.custom-content ol > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.custom-content ol {
+  padding-left: 1.25rem;
+  /* Decimal list style with padding and spacing */
+}
+
+/* List items */
+
+.custom-content li {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+  /* Text color for list items */
+}
+
+/* Code block */
+
+.custom-content pre {
+  overflow-x: auto;
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+  padding: 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity, 1));
+  /* Styling for pre blocks */
+  white-space: pre-wrap;
+  /* Allows long lines to wrap */
+}
+
+/* Inline code */
+
+.custom-content code {
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity, 1));
+  /* Styling for inline code */
+}
+
+/* Blockquote */
+
+.custom-content blockquote {
+  border-left-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+  padding-left: 1rem;
+  font-style: italic;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+  /* Left border and italic style */
+}
+
+/* Links */
+
+.custom-content a {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
+  text-decoration-line: underline;
+}
+
+.custom-content a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity, 1));
+}
+
+.custom-content a {
+  /* Link styling with hover effect */
+}
+
+/* Horizontal rule */
+
+.custom-content hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+  /* Horizontal rule with margin */
+}
+
+/* Images */
+
+.custom-content img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: auto;
+  max-width: 100%;
+  border-radius: 0.375rem;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  /* Image styling with shadow and responsive sizing */
+}
+
+/* Images */
+
+.custom-content img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: auto;
+  max-width: 100%;
+  border-radius: 0.375rem;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  /* Image styling with shadow and responsive sizing */
+}
+
+/* Table */
+
+.custom-content table {
+  width: 100%;
+  border-collapse: collapse;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+  /* Full-width table with borders */
+}
+
+.custom-content th,
+  .custom-content td {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  /* Border, padding, and spacing for cells */
+}
+
+.custom-content th {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+  text-align: left;
+  font-weight: 500;
+  /* Styling for table headers */
+}
+
+.custom-content tr:nth-child(even) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+  /* Alternate row background color */
+}
+
+/* Custom styles for pre/code block */
+
+.custom-content pre {
+  overflow-x: auto;
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+  padding: 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity, 1));
+  white-space: pre-wrap;
+  /* Ensures long lines wrap */
+}
+
+.custom-content code {
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity, 1));
+}
+
 .col-span-12 {
   grid-column: span 12 / span 12;
 }
@@ -865,14 +1133,14 @@ video {
   text-align: justify;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
 }
 
 .text-lg {
@@ -888,26 +1156,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .font-bold {
@@ -956,154 +1204,109 @@ video {
 }
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 
   font-weight: 100;
 
   font-style: normal;
 
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.eot');
-
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.ttf') format("truetype");
+  src: url("../fonts/poppins.thin.ttf") format("truetype");
 
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 
   font-weight: 200;
 
   font-style: normal;
 
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraLight.eot');
-
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraLight.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraLight.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraLight.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraLight.ttf') format("truetype");
+  src: url("../fonts/poppins.extralight.ttf") format("truetype");
 
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 
   font-weight: 300;
 
   font-style: normal;
 
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Light.eot');
-
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Light.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Light.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Light.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Light.ttf') format("truetype");
+  src: url("../fonts/poppins.light.ttf") format("truetype");
 
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 
   font-weight: 400;
 
   font-style: normal;
 
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Regular.eot');
-
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Regular.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Regular.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Regular.ttf') format("truetype");
+  src: url("../fonts/poppins.regular.ttf") format("truetype");
 
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 
   font-weight: 500;
 
   font-style: normal;
 
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Medium.eot');
-
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Medium.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Medium.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Medium.ttf') format("truetype");
+  src: url("../fonts/poppins.medium.ttf") format("truetype");
 
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 
   font-weight: 600;
 
   font-style: normal;
 
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-SemiBold.eot');
-
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-SemiBold.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-SemiBold.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-SemiBold.ttf') format("truetype");
+  src: url("../fonts/poppins.semibold.ttf") format("truetype");
 
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 
   font-weight: 700;
 
   font-style: normal;
 
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Bold.eot');
-
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Bold.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Bold.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Bold.ttf') format("truetype");
+  src: url("../fonts/poppins.bold.ttf") format("truetype");
 
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 
   font-weight: 800;
 
   font-style: normal;
 
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraBold.eot');
-
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraBold.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraBold.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraBold.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraBold.ttf') format("truetype");
+  src: url("../fonts/poppins.extrabold.ttf") format("truetype");
 
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 
   font-weight: 900;
 
   font-style: normal;
 
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Black.eot');
-
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Black.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Black.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Black.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Black.ttf') format("truetype");
+  src: url("../fonts/poppins.black.ttf") format("truetype");
 
   font-display: swap;
 }
@@ -1228,4 +1431,4 @@ video {
   .xl\:pl-10 {
     padding-left: 2.5rem;
   }
-} 
+}
