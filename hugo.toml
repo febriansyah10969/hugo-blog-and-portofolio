@@ -20,3 +20,4 @@ writeStats = true
   category = "categories"
 [permalinks]
   categories = "/categories/:slug/"
+  
