@@ -1,6 +1,10 @@
 [build]
-  command = "hugo build --config=hugo.toml --minify && tailwindcss -i src/css/styles.css -o static/css/styles.css"
+  command = "hugo --config=hugo.toml --minify && tailwindcss -i src/css/styles.css -o static/css/styles.css"
   publish = "public"
+
+[build.environment]
+HUGO_VERSION = "0.112.3"  # Replace with the version you need
+
 
 [context.deploy-preview]
   command = "npm run start:production"
