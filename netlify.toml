@@ -1,10 +1,9 @@
 [build]
-  command = "hugo --config=hugo.toml --minify && tailwindcss -i src/css/styles.css -o static/css/styles.css"
+  command = "hugo --config=hugo.toml --minify --baseURL="https://febriansyah10969.netlify.app/"  && tailwindcss -i src/css/styles.css -o static/css/styles.css"
   publish = "public"
 
 [build.environment]
-HUGO_VERSION = "0.112.3"  # Replace with the version you need
-
+  HUGO_VERSION = "0.112.3"  # Replace with the version you need
 
 [context.deploy-preview]
   command = "npm run start:production"
