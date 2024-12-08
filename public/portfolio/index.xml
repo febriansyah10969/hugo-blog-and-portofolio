@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Portfolios on My New Hugo Site</title>
-    <link>https://febriansyah10969.netlify.app:1313/portfolio/</link>
-    <description>Recent content in Portfolios on My New Hugo Site</description>
+    <title>Portfolios on Febriansyah</title>
+    <link>http://localhost/portfolio/</link>
+    <description>Recent content in Portfolios on Febriansyah</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Jun 2024 13:19:14 +0700</lastBuildDate>
-    <atom:link href="https://febriansyah10969.netlify.app:1313/portfolio/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My First Post</title>
-      <link>https://febriansyah10969.netlify.app:1313/portfolio/test/</link>
-      <pubDate>Wed, 26 Jun 2024 13:19:14 +0700</pubDate>
-      <guid>https://febriansyah10969.netlify.app:1313/portfolio/test/</guid>
-      <description>&lt;p&gt;test&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost/portfolio/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

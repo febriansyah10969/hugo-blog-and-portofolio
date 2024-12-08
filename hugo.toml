@@ -1,6 +1,6 @@
 baseURL = 'https://febriansyah10969.netlify.app/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Febriansyah'
 [[menu.main]]
   name = "About"
   url = "/about"
