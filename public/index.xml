@@ -1,1 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Febriansyah</title><link>https://febriansyah10969.netlify.app/</link><description>Recent content on Febriansyah</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://febriansyah10969.netlify.app/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Febriansyah</title><link>https://febriansyah10969.netlify.app/</link><description>Recent content on Febriansyah</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 Nov 2024 17:00:00 +0000</lastBuildDate><atom:link href="https://febriansyah10969.netlify.app/index.xml" rel="self" type="application/rss+xml"/><item><title>tested</title><link>https://febriansyah10969.netlify.app/post/reads/</link><pubDate>Thu, 28 Nov 2024 17:00:00 +0000</pubDate><guid>https://febriansyah10969.netlify.app/post/reads/</guid><description>&lt;h1 id="project-title">Project Title&lt;/h1>
+&lt;p>A brief description of what this project does and who it&amp;rsquo;s for&lt;/p>
+&lt;p>testing &lt;br>
+&lt;br>
+&lt;br>
+&lt;br>
+&lt;br>
+&lt;br>
+&lt;br>
+&lt;br>
+&lt;br>
+testing &lt;br>
+testing&lt;/p>
+&lt;h2 id="acknowledgements">Acknowledgements&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://awesomeopensource.com/project/elangosundar/awesome-README-templates">Awesome Readme Templates&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/matiassingers/awesome-readme">Awesome README&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project">How to write a Good readme&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="api-reference">API Reference&lt;/h2>
+&lt;h4 id="get-all-items">Get all items&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-http" data-lang="http">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010"> GET /api/items
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Parameter&lt;/th>
+ &lt;th style="text-align: left">Type&lt;/th>
+ &lt;th style="text-align: left">Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;code>api_key&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;code>string&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Required&lt;/strong>. Your API key&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h4 id="get-item">Get item&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-http" data-lang="http">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010"> GET /api/items/${id}
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Parameter&lt;/th>
+ &lt;th style="text-align: left">Type&lt;/th>
+ &lt;th style="text-align: left">Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;code>id&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;code>string&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>Required&lt;/strong>. Id of item to fetch&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h4 id="addnum1-num2">add(num1, num2)&lt;/h4>
+&lt;p>Takes two numbers and returns the sum.&lt;/p></description></item></channel></rss>

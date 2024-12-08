@@ -1,5 +1,5 @@
 [build]
-  command = "npm run start:production"
+  command = "hugo build --config=hugo.toml --minify && tailwindcss -i src/css/styles.css -o static/css/styles.css"
   publish = "public"
 
 [context.deploy-preview]
