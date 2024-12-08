@@ -1,5 +1,5 @@
 [build]
-  command = "hugo --config=hugo.toml --minify --baseURL="https://febriansyah10969.netlify.app/"  && tailwindcss -i src/css/styles.css -o static/css/styles.css"
+  command = "hugo --config=hugo.toml --minify --baseURL='https://febriansyah10969.netlify.app/'  && tailwindcss -i src/css/styles.css -o static/css/styles.css"
   publish = "public"
 
 [build.environment]
