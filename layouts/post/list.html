@@ -16,7 +16,7 @@
   <!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
   {{ $upper_limit := (sub $paginator.TotalPages $adjacent_links) }}
   {{ range $paginator.Pages }}
-  <a href="{{ .RelPermalink  }}">
+  <a href="{{ .Site.BaseURL }}{{ .RelPermalink }}">
     <div class="col-span-12 mb-3 sm:col-span-12 md:col-span-12 lg:col-span-12 xl:col-span-12">
       <div class="rounded-md bg-gray-50 p-4 shadow">
         <div class="flex items-center space-x-4">
