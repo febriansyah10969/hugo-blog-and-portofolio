@@ -5,6 +5,9 @@
 [context.deploy-preview]
   command = "npm run start:production"
 
+[context.production.environment]
+  HUGO_BASEURL = "https://febriansyah10969.netlify.app/"
+
 [dev]
   framework = "hugo"
   targetPort = 3000

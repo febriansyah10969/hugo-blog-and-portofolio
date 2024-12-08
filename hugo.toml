@@ -1,4 +1,5 @@
 baseURL = 'https://febriansyah10969.netlify.app/'
+appendPort=false
 languageCode = 'en-us'
 title = 'Febriansyah'
 [[menu.main]]
